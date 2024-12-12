@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта Архангельска</title>
+    <link rel="stylesheet" href="leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id='map'></div>
+        <div class="map__info">
+            <!-- <p id='doubleclick-hint'></p> -->
+            <p id='no-results'>Нет геозоны на этой позиции</p>
+            <table id='results-table'>
+                <thead>
+                    <tr>
+                        <td>№</td>
+                        <td>Название геозоны</td>
+                    </tr>
+                </thead>
+                <tbody id='results-table-body'></tbody>
+            </table>
+            <div class="map__ts">
+                <p>ТС:</p> <select id='units'>
+                    <option value='0'>—</option>
+                </select>
+                <!-- <p>Координаты: <input id='latlng' type='text' placeholder='latitude, longitude'>
+                     --><!--    <button id='apply-location-button'>Apply</button></p>
+                     --> <!-- <button id='unit-refresh-button'>Refresh</button> -->
+                <p><!-- Resources: --> <select id='resources'>
+                        <option value='0'>All</option>
+                    </select></p>
+            </div>
+        </div>
+        <div class="map__logo">
+            <img src="logo_without.svg" alt="">
+        </div>
+        <div class="map__weather">
+            <div id="gsInformerID-v82L8N8Wo5OTy6" class="gsInformer" style="width:235px;height:225px">
+                <div class="gsIContent">
+                    <div id="cityLink">
+                        <a href="https://www.gismeteo.ru/weather-arkhangelsk-3915/" target="_blank"
+                            title="Погода в Архангельске">
+                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/gisloader.svg" width="24" height="24"
+                                alt="Погода в Архангельске">
+                        </a>
+                    </div>
+                    <div class="gsLinks">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="leftCol">
+                                        <a href="https://www.gismeteo.ru/" target="_blank" title="Погода">
+                                            <img alt="Погода"
+                                                src="https://nst1.gismeteo.ru/assets/flat-ui/img/logo-mini2.png"
+                                                align="middle" border="0" width="11" height="16" />
+                                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/informer/gismeteo.svg"
+                                                border="0" align="middle" style="left: 5px; top:1px">
+                                        </a>
+                                    </div>
+                                    <div class="rightCol">
+                                        <a href="https://www.gismeteo.ru/weather-arkhangelsk-3915/2-weeks/"
+                                            target="_blank" title="Погода в Архангельске на 2 недели">
+                                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/informer/forecast-2weeks.ru.svg"
+                                                border="0" align="middle" style="top:auto"
+                                                alt="Погода в Архангельске на 2 недели">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map__weather-min">
+            <div id="gsInformerID-1PV2R7em67NFnr" class="gsInformer" style="width:125px;height:99px">
+                <div class="gsIContent">
+                    <div id="cityLink">
+                        <a href="https://www.gismeteo.ru/weather-arkhangelsk-3915/" target="_blank"
+                            title="Погода в Архангельске">
+                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/gisloader.svg" width="24" height="24"
+                                alt="Погода в Архангельске">
+                        </a>
+                    </div>
+                    <div class="gsLinks">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="leftCol">
+                                        <a href="https://www.gismeteo.ru/" target="_blank" title="Погода">
+                                            <img alt="Погода"
+                                                src="https://nst1.gismeteo.ru/assets/flat-ui/img/logo-mini2.png"
+                                                align="middle" border="0" width="11" height="16" />
+                                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/informer/gismeteo.svg"
+                                                border="0" align="middle" style="left: 5px; top:1px">
+                                        </a>
+                                    </div>
+                                    <div class="rightCol">
+                                        <a href="https://www.gismeteo.ru/weather-arkhangelsk-3915/2-weeks/"
+                                            target="_blank" title="Погода в Архангельске на 2 недели">
+                                            <img src="https://nst1.gismeteo.ru/assets/flat-ui/img/informer/forecast-2weeks.ru.svg"
+                                                border="0" align="middle" style="top:auto"
+                                                alt="Погода в Архангельске на 2 недели">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://doc.adormezen.ru/ad.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="wialon.js"></script>
+    <script src="gnss.js"></script>
+</body>
+
+</html>
